@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,151 +7,90 @@
     <title>Mery Cantika | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
 </head>
-
 
 <body>
 
-    <!-- =========================
-         BACKGROUND
-    ========================== -->
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Mery<span>.</span></div>
 
-    <div class="background">
+        <button class="menu-btn" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="orb orb-three"></div>
-
-    </div>
-
-
-
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
-    <header>
-
-        <nav class="navbar">
-
-            <!-- LOGO -->
-
-            <a href="#home" class="logo">
-                MC
-            </a>
-
-
-            <!-- MENU DESKTOP -->
-
-            <div class="nav-links">
-
-                <a href="#home">Home</a>
-
-                <a href="#about">About</a>
-
-                <a href="#skills">Skills</a>
-
-                <a href="#projects">Project</a>
-
-                <a href="#contact">Contact</a>
-
-            </div>
-
-
-            <!-- TOMBOL 3 GARIS -->
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Buka menu">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
+        <nav id="navMenu">
+            <a href="#about">About</a>
+            <a href="#skill">Skill</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
         </nav>
-
-
-
-        <!-- =========================
-             MENU HP
-        ========================== -->
-
-        <div class="mobile-menu" id="mobileMenu">
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#skills">
-                Skills
-            </a>
-
-            <a href="#projects">
-                Project
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
     </header>
 
-<!-- =========================
-             FOTO
-        ========================== -->
 
-        <div class="hero-photo">
+    <!-- HOME -->
+    <section class="home" id="home">
 
-            <div class="photo-ring">
+        <div class="home-content">
 
-                <img
-                    src="file_000000005668820baffce4da85e69505.png"
-                    alt="Foto Mery Cantika">
-
+            <!-- FOTO BULAT -->
+            <div class="photo-box">
+                <img src="foto.jpg" alt="Foto Mery Cantika">
             </div>
 
+            <!-- TEXT DI BAWAH FOTO -->
+            <p class="hello">HELLO, I'M</p>
 
-            <!-- KARTU MELAYANG -->
+            <h1>Mery Cantika</h1>
 
-            <div class="floating-card card-one">
+            <h2>Software Engineering Student</h2>
 
-                <strong>
-                    HTML
-                </strong>
+            <p class="home-text">
+                Saya adalah pelajar SMK jurusan Rekayasa Perangkat Lunak
+                yang tertarik pada dunia website, desain, dan teknologi.
+            </p>
 
-                <small>
-                    Web Development
-                </small>
+            <a href="#about" class="home-btn">Lihat Profil</a>
 
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT / STATUS -->
+    <section class="section" id="about">
+
+        <div class="section-title">
+            <p>ABOUT ME</p>
+            <h2>Tentang Saya</h2>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="info-card">
+                <span>STATUS</span>
+                <h3>Pelajar</h3>
+                <p>Siswa SMK yang sedang mengembangkan kemampuan di bidang teknologi.</p>
             </div>
 
+            <div class="info-card">
+                <span>JURUSAN</span>
+                <h3>Rekayasa Perangkat Lunak</h3>
+                <p>Belajar mengenai pemrograman, website, database, dan pengembangan software.</p>
+            </div>
 
-            <div class="floating-card card-two">
+            <div class="info-card">
+                <span>BIDANG</span>
+                <h3>Web Development</h3>
+                <p>Tertarik membuat website yang sederhana, menarik, dan responsif.</p>
+            </div>
 
-                <strong>
-                    CSS
-                </strong>
-
-                <small>
-                    Creative Design
-                </small>
-
+            <div class="info-card">
+                <span>SAAT INI</span>
+                <h3>Learning & Creating</h3>
+                <p>Sedang belajar HTML, CSS, JavaScript, GitHub, dan pengembangan website.</p>
             </div>
 
         </div>
@@ -160,160 +98,38 @@
     </section>
 
 
-
-    <!-- =========================
-         HOME
-    ========================== -->
-
-    <section id="home" class="hero">
-
-        <div class="hero-text">
-
-
-            <div class="status">
-
-                <span></span>
-
-                Available for learning & projects
-
-            </div>
-
-
-            <p class="hello">
-                HELLO, I'M
-            </p>
-
-
-            <h1>
-
-                Mery
-
-                <span>
-                    Cantika
-                </span>
-
-            </h1>
-
-
-            <h2>
-                Software Engineering Student
-            </h2>
-
-
-            <p class="description">
-
-                Saya seorang pelajar SMK jurusan
-                Rekayasa Perangkat Lunak yang tertarik
-                dengan web development, desain,
-                dan teknologi.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#projects"
-                    class="btn primary">
-
-                    Lihat Project →
-
-                </a>
-
-
-                <a
-                    href="#about"
-                    class="btn secondary">
-
-                    Tentang Saya
-
-                </a>
-
-            </div>
-
-
-            <div class="social">
-
-                <a
-                    href="https://github.com/"
-                    target="_blank">
-
-                    GitHub
-
-                </a>
-
-
-                <a
-                    href="https://instagram.com/cntkaamry"
-                    target="_blank">
-
-                    Instagram
-
-                </a>
-
-            </div>
-
-        </div>
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section id="about" class="section">
+    <!-- SKILL -->
+    <section class="section skill-section" id="skill">
 
         <div class="section-title">
-
-            <p>
-                GET TO KNOW ME
-            </p>
-
-            <h2>
-                About <span>Me</span>
-            </h2>
-
+            <p>MY SKILLS</p>
+            <h2>Skill</h2>
         </div>
 
+        <div class="skill-grid">
 
-        <div class="about-box">
-
-            <div class="about-number">
-                01
+            <div class="skill-card">
+                <div class="skill-icon">HTML</div>
+                <h3>HTML</h3>
+                <p>Membuat struktur dasar halaman website.</p>
             </div>
 
+            <div class="skill-card">
+                <div class="skill-icon">CSS</div>
+                <h3>CSS</h3>
+                <p>Mengatur tampilan, warna, layout, dan responsivitas website.</p>
+            </div>
 
-            <div class="about-content">
+            <div class="skill-card">
+                <div class="skill-icon">JS</div>
+                <h3>JavaScript</h3>
+                <p>Membuat website menjadi lebih interaktif.</p>
+            </div>
 
-                <h3>
-                    Hai, saya Mery 👋
-                </h3>
-
-
-                <p>
-
-                    Saya adalah siswa Rekayasa Perangkat
-                    Lunak yang sedang mengembangkan
-                    kemampuan dalam membuat website.
-
-                </p>
-
-
-                <p>
-
-                    Saya tertarik mempelajari HTML, CSS,
-                    desain interface, dan berbagai
-                    teknologi digital.
-
-                </p>
-
-
-                <p>
-
-                    Website ini menjadi tempat untuk
-                    menampilkan proses belajar,
-                    kemampuan, dan project saya.
-
-                </p>
-
+            <div class="skill-card">
+                <div class="skill-icon">UI</div>
+                <h3>UI Design</h3>
+                <p>Membuat tampilan website yang sederhana dan nyaman dilihat.</p>
             </div>
 
         </div>
@@ -321,300 +137,44 @@
     </section>
 
 
-
-    <!-- =========================
-         SKILLS
-    ========================== -->
-
-    <section id="skills" class="section">
+    <!-- PROJECT -->
+    <section class="section" id="project">
 
         <div class="section-title">
-
-            <p>
-                MY ABILITIES
-            </p>
-
-            <h2>
-                My <span>Skills</span>
-            </h2>
-
+            <p>MY WORK</p>
+            <h2>Project</h2>
         </div>
-
-
-        <div class="skills-grid">
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    &lt;/&gt;
-                </div>
-
-                <h3>
-                    HTML
-                </h3>
-
-                <p>
-
-                    Membuat struktur website
-                    yang rapi dan terstruktur.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ✦
-                </div>
-
-                <h3>
-                    CSS
-                </h3>
-
-                <p>
-
-                    Membuat tampilan website
-                    modern dan responsive.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    JS
-                </div>
-
-                <h3>
-                    JavaScript
-                </h3>
-
-                <p>
-
-                    Mempelajari interaksi
-                    dan fungsi website.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ◆
-                </div>
-
-                <h3>
-                    UI Design
-                </h3>
-
-                <p>
-
-                    Membuat desain interface
-                    yang sederhana dan menarik.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         PROJECT
-    ========================== -->
-
-    <section id="projects" class="section">
-
-        <div class="section-title">
-
-            <p>
-                MY WORK
-            </p>
-
-            <h2>
-                My <span>Projects</span>
-            </h2>
-
-        </div>
-
 
         <div class="project-grid">
 
-
-            <!-- PROJECT 1 -->
-
             <div class="project-card">
-
-                <div class="project-image project-one">
-
-                    <span>
-                        01
-                    </span>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <small>
-                        WEB DEVELOPMENT
-                    </small>
-
-                    <h3>
-                        Personal Portfolio
-                    </h3>
-
-
-                    <p>
-
-                        Website portfolio pribadi
-                        untuk menampilkan profil,
-                        skill, dan project.
-
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span>
-                            HTML
-                        </span>
-
-                        <span>
-                            CSS
-                        </span>
-
-                        <span>
-                            GitHub
-                        </span>
-
-                    </div>
-
-                </div>
-
+                <div class="project-number">01</div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                    Website portfolio pribadi menggunakan HTML, CSS,
+                    dan JavaScript.
+                </p>
+                <span>HTML • CSS • JavaScript</span>
             </div>
 
-
-
-            <!-- PROJECT 2 -->
-
             <div class="project-card">
-
-                <div class="project-image project-two">
-
-                    <span>
-                        02
-                    </span>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <small>
-                        WEB DESIGN
-                    </small>
-
-                    <h3>
-                        Website Desa
-                    </h3>
-
-
-                    <p>
-
-                        Website untuk memperkenalkan
-                        keindahan dan informasi
-                        sebuah desa.
-
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span>
-                            HTML
-                        </span>
-
-                        <span>
-                            CSS
-                        </span>
-
-                        <span>
-                            Design
-                        </span>
-
-                    </div>
-
-                </div>
-
+                <div class="project-number">02</div>
+                <h3>Website Desa</h3>
+                <p>
+                    Website yang menampilkan informasi dan keindahan
+                    sebuah desa.
+                </p>
+                <span>HTML • CSS</span>
             </div>
 
-
-
-            <!-- PROJECT 3 -->
-
             <div class="project-card">
-
-                <div class="project-image project-three">
-
-                    <span>
-                        03
-                    </span>
-
-                </div>
-
-
-                <div class="project-content">
-
-                    <small>
-                        RPL PROJECT
-                    </small>
-
-                    <h3>
-                        Mini Project
-                    </h3>
-
-
-                    <p>
-
-                        Project pembelajaran
-                        Rekayasa Perangkat Lunak
-                        sebagai proses belajar.
-
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span>
-                            RPL
-                        </span>
-
-                        <span>
-                            UI
-                        </span>
-
-                        <span>
-                            Web
-                        </span>
-
-                    </div>
-
-                </div>
-
+                <div class="project-number">03</div>
+                <h3>Mini Project RPL</h3>
+                <p>
+                    Project pembelajaran untuk mengembangkan kemampuan
+                    pemrograman dan desain website.
+                </p>
+                <span>Web Development</span>
             </div>
 
         </div>
@@ -622,220 +182,44 @@
     </section>
 
 
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section id="contact" class="contact-section">
+        <div class="section-title">
+            <p>GET IN TOUCH</p>
+            <h2>Contact</h2>
+        </div>
 
         <div class="contact-box">
 
+            <h3>Mari Terhubung</h3>
+
             <p>
-                LET'S CONNECT
+                Jika ingin mengenal saya lebih jauh atau berdiskusi
+                mengenai project, silakan hubungi saya.
             </p>
 
-
-            <h2>
-
-                Let's create something
-
-                <span>
-                    awesome.
-                </span>
-
-            </h2>
-
-
-            <p class="contact-text">
-
-                Terima kasih sudah mengunjungi
-                portfolio saya.
-
-            </p>
-
-
-            <a
-                href="mailto:cantikamerry7@gmail.com"
-                class="contact-button">
-
-                Email Me →
-
+            <a href="mailto:canticamerry7@gmail.com" class="contact-btn">
+                Email Saya
             </a>
+
+            <div class="social">
+                <a href="https://github.com/EkiZR" target="_blank">GitHub</a>
+                <a href="https://instagram.com/cntkaamry" target="_blank">Instagram</a>
+            </div>
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer>
-
-        <div class="footer-logo">
-            MC
-        </div>
-
-
-        <p>
-            © 2026 Mery Cantika
-        </p>
-
-
-        <div class="footer-links">
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#projects">
-                Project
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
+        <p>© 2026 Mery Cantika. All Rights Reserved.</p>
     </footer>
 
 
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script>
-
-        const menuToggle =
-            document.getElementById("menuToggle");
-
-        const mobileMenu =
-            document.getElementById("mobileMenu");
-
-
-        /* BUKA / TUTUP MENU */
-
-        menuToggle.addEventListener(
-            "click",
-            function () {
-
-                menuToggle.classList.toggle("active");
-
-                mobileMenu.classList.toggle("active");
-
-            }
-        );
-
-
-        /* TUTUP MENU SETELAH MEMILIH */
-
-        const mobileLinks =
-            document.querySelectorAll(
-                ".mobile-menu a"
-            );
-
-
-        mobileLinks.forEach(
-            function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        menuToggle.classList.remove(
-                            "active"
-                        );
-
-                        mobileMenu.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-
-        /* ANIMASI CARD SAAT SCROLL */
-
-        const cards =
-            document.querySelectorAll(
-                ".skill-card, .project-card"
-            );
-
-
-        const observer =
-            new IntersectionObserver(
-                function (entries) {
-
-                    entries.forEach(
-                        function (entry) {
-
-                            if (
-                                entry.isIntersecting
-                            ) {
-
-                                entry.target.classList.add(
-                                    "show"
-                                );
-
-                            }
-
-                        }
-                    );
-
-                },
-                {
-                    threshold: 0.15
-                }
-            );
-
-
-        cards.forEach(
-            function (card) {
-
-                observer.observe(card);
-
-            }
-        );
-
-
-        /* NAVBAR SAAT SCROLL */
-
-        window.addEventListener(
-            "scroll",
-            function () {
-
-                const navbar =
-                    document.querySelector(
-                        ".navbar"
-                    );
-
-                if (window.scrollY > 40) {
-
-                    navbar.classList.add(
-                        "scrolled"
-                    );
-
-                } else {
-
-                    navbar.classList.remove(
-                        "scrolled"
-                    );
-
-                }
-
-            }
-        );
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
-
-        </html>
+</html>
