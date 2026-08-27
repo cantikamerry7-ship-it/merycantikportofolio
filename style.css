@@ -522,7 +522,8 @@ header {
     min-height: 100vh;
     max-width: 1150px;
     margin: auto;
-    padding: 140px 25px 70px;
+
+    padding: 210px 25px 90px;
 
     display: flex;
     flex-direction: column;
