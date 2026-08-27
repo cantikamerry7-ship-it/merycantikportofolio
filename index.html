@@ -22,27 +22,68 @@
         <span class="orb orb3"></span>
     </div>
 
+
     <!-- NAVBAR -->
     <header>
         <nav class="navbar">
 
+            <!-- LOGO -->
             <a href="#home" class="logo">
-                M<span>C</span>
+                MC
             </a>
 
+            <!-- MENU DESKTOP -->
             <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Project</a>
-    <a href="#contact">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Project</a>
+                <a href="#contact">Contact</a>
             </div>
 
+            <!-- CONTACT DESKTOP -->
             <a href="#contact" class="nav-button">
                 Contact Me
             </a>
 
+            <!-- HAMBURGER HP -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="#home">
+                <span>⌂</span>
+                Home
+            </a>
+
+            <a href="#about">
+                <span>○</span>
+                About
+            </a>
+
+            <a href="#skills">
+                <span>✦</span>
+                Skills
+            </a>
+
+            <a href="#projects">
+                <span>▣</span>
+                Project
+            </a>
+
+            <a href="#contact">
+                <span>✉</span>
+                Contact
+            </a>
+
+        </div>
     </header>
 
 
@@ -94,8 +135,8 @@
 
             <div class="photo-ring">
 
-                <!-- GANTI LINK FOTO DI SINI -->
-                <img src="file_000000005668820baffce4da85e69505.png" alt="Mery Cantika">
+                <!-- GANTI FOTO DI SINI -->
+                <img src="foto.jpg" alt="Foto Mery Cantika">
 
             </div>
 
@@ -168,7 +209,7 @@
             <div class="skill-card">
                 <div class="skill-icon">✦</div>
                 <h3>CSS</h3>
-                <p>Membuat tampilan website modern, responsive, dan menarik.</p>
+                <p>Membuat tampilan website modern dan responsive.</p>
             </div>
 
             <div class="skill-card">
@@ -180,7 +221,7 @@
             <div class="skill-card">
                 <div class="skill-icon">◆</div>
                 <h3>UI Design</h3>
-                <p>Membuat desain interface yang sederhana dan nyaman digunakan.</p>
+                <p>Membuat desain interface yang sederhana dan menarik.</p>
             </div>
 
         </div>
@@ -188,7 +229,7 @@
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- PROJECT -->
     <section id="projects" class="section">
 
         <div class="section-title">
@@ -205,7 +246,10 @@
                 </div>
 
                 <div class="project-content">
-                    <p class="project-type">WEB DEVELOPMENT</p>
+
+                    <p class="project-type">
+                        WEB DEVELOPMENT
+                    </p>
 
                     <h3>Personal Portfolio</h3>
 
@@ -219,6 +263,7 @@
                         <span>CSS</span>
                         <span>GitHub</span>
                     </div>
+
                 </div>
 
             </div>
@@ -231,12 +276,15 @@
                 </div>
 
                 <div class="project-content">
-                    <p class="project-type">WEB DESIGN</p>
+
+                    <p class="project-type">
+                        WEB DESIGN
+                    </p>
 
                     <h3>Website Desa</h3>
 
                     <p>
-                        Konsep website sederhana untuk memperkenalkan
+                        Website sederhana untuk memperkenalkan
                         keindahan dan informasi sebuah desa.
                     </p>
 
@@ -245,6 +293,7 @@
                         <span>CSS</span>
                         <span>Design</span>
                     </div>
+
                 </div>
 
             </div>
@@ -257,7 +306,10 @@
                 </div>
 
                 <div class="project-content">
-                    <p class="project-type">RPL PROJECT</p>
+
+                    <p class="project-type">
+                        RPL PROJECT
+                    </p>
 
                     <h3>Mini Project</h3>
 
@@ -271,6 +323,7 @@
                         <span>UI</span>
                         <span>Web</span>
                     </div>
+
                 </div>
 
             </div>
@@ -326,33 +379,65 @@
     </footer>
 
 
-    <!-- ANIMATION SCRIPT -->
+    <!-- JAVASCRIPT MENU -->
     <script>
 
-        const cards = document.querySelectorAll(".skill-card, .project-card");
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-        const observer = new IntersectionObserver((entries) => {
+        // Buka / tutup menu
+        menuToggle.addEventListener("click", function () {
 
-            entries.forEach(entry => {
+            menuToggle.classList.toggle("active");
+            mobileMenu.classList.toggle("active");
 
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                }
-
-            });
-
-        }, {
-            threshold: 0.15
         });
 
 
-        cards.forEach(card => {
+        // Tutup menu setelah memilih menu
+        const mobileLinks = document.querySelectorAll(".mobile-menu a");
+
+        mobileLinks.forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                menuToggle.classList.remove("active");
+                mobileMenu.classList.remove("active");
+
+            });
+
+        });
+
+
+        // Animasi skill & project saat muncul di layar
+        const cards = document.querySelectorAll(
+            ".skill-card, .project-card"
+        );
+
+        const observer = new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        cards.forEach(function(card) {
             observer.observe(card);
         });
 
 
-        // Efek navbar ketika scroll
-        window.addEventListener("scroll", () => {
+        // Navbar saat scroll
+        window.addEventListener("scroll", function() {
 
             const navbar = document.querySelector(".navbar");
 
@@ -367,4 +452,4 @@
     </script>
 
 </body>
-  </html>
+</html>
